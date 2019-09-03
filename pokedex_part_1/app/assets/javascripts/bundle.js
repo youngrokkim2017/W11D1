@@ -168,9 +168,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 document.addEventListener('DOMContentLoaded', function () {
-  var rootEl = document.getElementById('root');
-  ReactDOM.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Pokedex"), rootEl);
-  var store = _store_store_js__WEBPACK_IMPORTED_MODULE_2__["default"];
+  // const rootEl = document.getElementById('root');
+  // ReactDOM.render(<h1>Pokedex</h1>, rootEl);
+  // const store = configureStore;
+  var store = Object(_store_store_js__WEBPACK_IMPORTED_MODULE_2__["default"])();
+  var root = document.getElementById('root');
+  ReactDOM.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Root, {
+    store: store
+  }), root);
 }); // window.getState = store.getState; 
 // window.dispatch = store.dispatch;
 
